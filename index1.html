@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM MULTIPLICATION</title>
+</head>
+<body id="body">
+    <ul id="element" data="valid">
+        <li class="List-item">first Element</li>
+        <li class="List-item">second Element</li>
+        <li class="List-item">third Element</li>
+    </ul>
+
+    <div id="firstDiv"  class="allDivs">first Div</div>
+    <script>
+        //const allDivs = document.getElementsByClassName("allDivs")
+       const allDivs = document.querySelectorAll(".allDivs")
+       // console.log(allDivs)
+    </script>
+    <div class="allDivs">second Div</div>
+    <table>
+        <tr>
+            <td>one</td>
+            <td>two</td>
+            <td>three</td>
+        </tr>
+        <tr>
+            <td>four</td>
+            <td>five</td>
+            <td>six</td>
+        </tr>
+    </table>
+    <button id="clickBtn" onclick="alert('Pranam World')">click me</button>
+    <script>
+        //rooot node 
+       // console.log(document.documentElement)
+       // console.log(document.body)
+       // console.log(document.head)
+        //childrens
+        //console.log(document.body.childNodes)
+       // console.log(document.body.children)
+        //console.log(document.body.firstChild)
+        //console.log(document.body.firstElementChild)
+        //console.log(document.body.lastChild)
+       // console.log(document.body.lastElementChild)
+
+       // for (node of document.body.children){
+       //     console.log(node)
+       // }
+       // for (node of document.body.childNode){
+       //     console.log(node)
+       // }
+
+       //siblings
+       //console.log(document.body.children[0])
+       //const ulTag = document.body.children[0]
+    // console.log(ulTag.nextSibling)
+    //console.log(ulTag.nextElementSibling)
+    // const firstLi = ulTag.children[0]
+    //console.log(firstLi.previousElementSibling)
+    // console.log(firstLi.nextElementSibling)
+    //const secondLi = ulTag.children[1]
+    //console.log(secondLi.previousElementSibling)
+    //console.log(secondLi.previousElementSibling.textContent)
+
+    //table Dom
+
+    const tableTag = document.body.children[1]
+    // console.log(tableTag.tBodies[0].rows[0].cells[0].textContent)
+    //console.log(tableTag.tBodies[0].rows[0].cells[1].style = "background-color: blue;")
+    // console.log(tableTag.tBodies[0].rows[0].cells[1].textContent)
+    //console.log(tableTag.tBodies[0].rows[1].cells[1].textContent)
+    //console.log(tableTag.rows)
+
+    //ID Search
+    //element.style.background = "red"
+    //console.log()
+
+    //const ulTag = document.getElementById("element")
+    //ulTag.style.backgroundColor="yellow"
+    //console.log()
+
+    //ListItem = document.getElementsByClassName("List-item")
+    //console.log(document.getElementsByTagName("table"))
+    //console.log(ListItem)
+
+    const ListItems =document.querySelector('.List-item')
+    const ListItems1 =document.querySelectorAll('.List-item')
+    const ListItems2 =document.querySelector('#element')
+    const ListItems3 =document.querySelectorAll('ul > li:last-child')
+    const ListItems4 =document.querySelectorAll('ul > li:nth-child(2)')
+    //console.log(ListItems1)
+    //console.log(ListItems4[0].textContent)
+
+
+    //console.log(allDivs)
+    //attributes
+    //console.log(element.id)
+    //console.log(element.data)//undefine
+    // console.log(element.getAttribute("data"))
+    // console.log(element.setAttribute("oder-palced","pending"))
+    // console.log("oder-palced")
+    //console.log(element.hasAttribute("oder-palced"))
+    //console.log(element.removeAttribute("oder-palced"))
+    //  console.log(element.hasAttribute("oder-palced"))
+
+    //creating and removing node element
+    const newDiv = document.createElement("div")
+    newDiv.textContent="namasta"
+    //newDiv.innerHTML = ``
+    //const newText = document.createTextNode("Pranam")
+    //newDiv.appendChild(newText)
+    body.append(newDiv)//for print in bottom
+    //body.prepend(newDiv)//for print in top
+    //body.before(newDiv)//body before
+    // body.after(newDiv)//after body 
+    //firstDiv.replaceWith(newDiv)
+    //firstDiv.remove()
+
+
+    //Events
+    function callMe(events){
+        console.log(event.type)
+        console.log(event.currentTarget)
+        console.log(event.clientY)
+        console.log(event.clientX)
+        alert("Bsdk")
+    }
+
+    //function callMe(){
+    //    alert("Namasta World")
+    //}
+    //clickBtn.onclick = callMe
+   // clickBtn.onclick = function(){
+    //    alert("Namasta ")
+    //}
+    clickBtn.addEventListener("click",callMe)
+    //clickBtn.addEventListener("click",function(){
+    //    alert("Namasta")
+    //})
+    </script>
+</body>
+</html>

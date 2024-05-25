@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script level example</title>
+</head>
+<body>
+    <script> 
+    document.addEventListener("DOMContentLoaded",function(){
+        const para =document.querySelector('button');
+        para.addEventListener("click",updateName);
+        function updateName(){
+            let name = prompt("Enter name of the student ");
+            para.textContent = 'Roll No 22 :'+name;
+        }
+    });
+    </script>
+    <button>Roll No 22 : Mainak Maity </button>
+</body>
+</html>
